@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01_Servlet</title>
+</head>
+<body>
+	<h1>01_Servlet</h1>
+	
+	<hr>
+	
+	<h2>Servlet</h2>
+	<p>
+		서블릿이란, 웹 서비스를 위한 자바 클래스를 말하며 자바를 사용해서 웹을 만들기 위한 기술로
+		javax.servlet.http.HttpServlet 클래스를 상속받는다. <br>
+		java 파일에 웹 페이지 구현을 위한 HTML이 들어간 구조로 클라이언트의 요청을 처리하고 그 결과로 HTML을 동적으로 생성하여
+		클라이언트에게 전송한다. <br>
+		단, HTML 변경 시 servlet을 재 컴파일해야 한다는 단점이 있다.
+	</p>
+	
+	<a href="first.do">View Details</a> <br>
+	<a href="second.do">View Details</a> <br>
+	
+	<hr>
+	
+	<h2>Servlet Life Cycle</h2>
+	<p>
+		객체가 생성 후 소멸되기까지의 과정을 라이프 사이클이라고 한다. <br>
+		1. 첫 번째 요청일 경우, 객체를 생성하고 init() 메소드를 호출한다. (이후 요청에 대해서는 실행될 때마다 객체를 생성하지 않는다.)<br>
+		2. service() 메소드가 사용자의 HTTP 요청에 따라 doGet(), doPost() 호출한다. <br>
+		3. 서블릿이 서비스되지 않거나, 재 컴파일 될 때 서블릿 객체가 destroy() 호출 후 소멸한다.
+	</p>
+	
+	<a href="life.do">View Details</a> <br>
+	
+	<hr>
+	
+	<h2>Servlet HTTP 요청 처리</h2>
+	<p>
+		GET 방식은 URL에 데이터를 포함시켜 요청하는 것으로 보안 유지가 불가능하다.
+		따라서 로그인 같은 경우는 GET 방식은 부적합하다. <br>
+		GET 방식에서 데이터를 Header에 포함하여 전송하고 Body는 빈 상태로 전송되며
+		Header의 내용 중에 body의 데이터를 설명하는 content-type 헤더도 포함되지 않는다. <br><br>
+		
+		POST 방식은 데이터를 노출하지 않고 요청하는 것으로 보안 유지가 가능하다. <br>
+		데이터를 Body에 포함하여 전송하고 body의 데이터를 설명하는 content-type 헤더가 포함된다. <br>
+	</p>
+	
+	<a href="views/userForm.html">View Details</a> <br>
+	
+	
+	
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+</body>
+</html>
